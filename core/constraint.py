@@ -1,35 +1,15 @@
-"""
-Kiểm tra các ràng buộc cứng (Hard Constraints) cho bài toán xếp lịch
 
-Ràng buộc cứng là các điều kiện BẮT BUỘC phải thỏa mãn:
-- Giáo viên không được dạy 2 môn cùng thời điểm
-- Phòng học không được sử dụng cho 2 môn cùng thời điểm
-- Mỗi lớp sinh viên không được học 2 môn cùng thời điểm
-- Ràng buộc địa điểm (môn học phải ở đúng cơ sở)
-"""
 
 from typing import Dict, Set
 from core.model import Assignment, Schedule, Course, Room, Teacher, Timeslot
 
 
 class ConstraintChecker:
-    """
-    Lớp kiểm tra ràng buộc cứng
-    
-    Tất cả các ràng buộc phải được thỏa mãn để một assignment được chấp nhận.
-    """
+   
 
     def __init__(self, courses: Dict[str, Course], rooms: Dict[str, Room],
                  teachers: Dict[str, Teacher], timeslots: Dict[str, Timeslot]):
-        """
-        Khởi tạo checker
-        
-        Args:
-            courses: Dictionary các môn học
-            rooms: Dictionary các phòng học
-            teachers: Dictionary các giáo viên
-            timeslots: Dictionary các khung giờ
-        """
+       
         self.courses = courses
         self.rooms = rooms
         self.teachers = teachers

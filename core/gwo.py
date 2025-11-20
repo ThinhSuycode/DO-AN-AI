@@ -1,14 +1,8 @@
-"""
-Thuật toán Grey Wolf Optimizer (GWO) để tối ưu lịch học
-
-GWO là một thuật toán metaheuristic mô phỏng hành vi săn mồi của đàn sói.
-Sử dụng Alpha, Beta, Delta (3 sói tốt nhất) để hướng dẫn các sói khác tìm kiếm.
-"""
 
 import random
 from typing import Dict, List, Tuple, Optional
 from core.model import Schedule, Assignment, Course, Room, Teacher, Timeslot
-from core.constraints import ConstraintChecker
+from core.constraint import ConstraintChecker
 from core.evaluator import ScheduleEvaluator
 
 
