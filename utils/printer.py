@@ -2,7 +2,7 @@
 Module in lịch học ra màn hình
 """
 
-from typing import Dict
+from typing import Dict, List
 from core.model import Schedule, Assignment, Course, Room, Teacher, Timeslot
 
 
